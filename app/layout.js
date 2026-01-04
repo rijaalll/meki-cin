@@ -2,6 +2,7 @@ import Navbar from "@/src/components/navbar";
 import FirstUserModal from "@/src/components/FirstUserModal";
 import { Montserrat } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
+import { Suspense } from 'react';
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -81,7 +82,9 @@ export default function RootLayout({ children }) {
           shadow="0 0 10px #db2777, 0 0 5px #db2777"
         />
         <FirstUserModal />
-        <Navbar />
+        <Suspense fallback={null}>
+          <Navbar />
+        </Suspense>
         {children}
       </body>
     </html>
