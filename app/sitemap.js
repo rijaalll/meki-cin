@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const baseUrl = 'https://drakorchina.vercel.app'; // Replace with actual domain
+  const baseUrl = 'https://mekicin.rpnza.my.id';
 
   return [
     {
@@ -14,6 +14,6 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-    // We can add dynamic routes here by fetching data if needed
+    
   ];
 }
