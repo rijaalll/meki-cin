@@ -2,7 +2,7 @@ import Navbar from "@/src/components/navbar";
 import FirstUserModal from "@/src/components/FirstUserModal";
 import { Montserrat } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
-import { Suspense } from 'react';
+import { Suspense } from "react";
 import "./globals.css";
 
 const montserrat = Montserrat({
@@ -14,10 +14,23 @@ export const metadata = {
   title: "Meki-Cin - Streaming Drakor China",
   description:
     "Tempat streaming drakor china gratis. Nonton drama china subtitle indonesia terbaru dan terpopuler.",
-  keywords: ["drakor china", "drama china", "drachin", "streaming drama", "nonton drakor", "meki-cin", "ahmad rizal"],
+  keywords: [
+    "drakor china",
+    "drama china",
+    "drachin",
+    "streaming drama",
+    "nonton drakor",
+    "meki-cin",
+    "ahmad rizal",
+  ],
   authors: [{ name: "Ahmad Rizal", url: "https://meki-cin.rpnza.my.id" }],
   creator: "Ahmad Rizal",
   publisher: "Meki-Cin",
+
+  verification: {
+    google: "E3PrGvafskig_BOEw6rU_3YrIjWs-5e0MQwF-wwuUWI",
+  },
+
   robots: {
     index: true,
     follow: true,
@@ -29,6 +42,7 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
+
   openGraph: {
     title: "Meki-Cin - Streaming Drakor China",
     description:
@@ -46,17 +60,18 @@ export const metadata = {
     locale: "id_ID",
     type: "website",
   },
+
   twitter: {
     card: "summary_large_image",
     title: "Meki-Cin - Streaming Drakor China",
-    description:
-      "Tempat streaming drakor china gratis",
+    description: "Tempat streaming drakor china gratis",
     images: ["/logo.png"],
   },
+
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
-    apple: "/logo.png", // Explicitly supports apple-touch-icon
+    apple: "/logo.png",
     other: {
       rel: "apple-touch-icon-precomposed",
       url: "/logo.png",
@@ -81,10 +96,13 @@ export default function RootLayout({ children }) {
           speed={200}
           shadow="0 0 10px #db2777, 0 0 5px #db2777"
         />
+
         <FirstUserModal />
+
         <Suspense fallback={null}>
           <Navbar />
         </Suspense>
+
         {children}
       </body>
     </html>
