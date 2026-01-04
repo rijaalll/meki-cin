@@ -47,7 +47,7 @@ export const metadata = {
     title: "Meki-Cin - Streaming Drakor China",
     description:
       "Tempat streaming drakor china gratis. Nonton drama china subtitle indonesia terbaru dan terpopuler.",
-    url: "https://meki-cin.rpnza.my.id",
+    url: "https://mekicin.rpnza.my.id",
     siteName: "Meki-Cin",
     images: [
       {
